@@ -43,23 +43,23 @@ const Dashboard = () => {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Welcome Section */}
-      <div className="bg-gradient-primary rounded-2xl p-6 text-white relative overflow-hidden">
+      <div className="bg-primary rounded-2xl p-6 text-primary-foreground relative overflow-hidden">
         <div className="relative z-10">
           <h1 className="text-3xl font-bold mb-2">Welcome back, John! 👋</h1>
-          <p className="text-white/80 mb-4">Ready to tackle some coding challenges today?</p>
+          <p className="text-primary-foreground/80 mb-4">Ready to tackle some coding challenges today?</p>
           <div className="flex gap-3">
-            <Button variant="secondary" className="bg-white/20 text-white border-0 hover:bg-white/30">
+            <Button variant="secondary" className="bg-primary-foreground/20 text-primary-foreground border-0 hover:bg-primary-foreground/30">
               <Plus className="w-4 h-4 mr-2" />
               Add Question
             </Button>
-            <Button variant="ghost" className="text-white border-white/20 hover:bg-white/10">
+            <Button variant="outline" className="text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/10">
               <Brain className="w-4 h-4 mr-2" />
               Take Quiz
             </Button>
           </div>
         </div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-32 translate-x-32"></div>
-        <div className="absolute bottom-0 right-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 translate-x-16"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full -translate-y-32 translate-x-32"></div>
+        <div className="absolute bottom-0 right-0 w-32 h-32 bg-primary-foreground/5 rounded-full translate-y-16 translate-x-16"></div>
       </div>
 
       {/* Stats Grid */}

@@ -25,19 +25,19 @@ const Sidebar = () => {
 
   return (
     <div className={cn(
-      "bg-gradient-primary text-primary-foreground transition-all duration-300 flex flex-col relative",
+      "bg-primary text-primary-foreground transition-all duration-300 flex flex-col relative",
       collapsed ? "w-16" : "w-64"
     )}>
       {/* Logo Section */}
-      <div className="p-6 border-b border-white/10">
+      <div className="p-6 border-b border-primary-foreground/10">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
+          <div className="w-8 h-8 bg-primary-foreground/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
             <BookOpen className="w-5 h-5" />
           </div>
           {!collapsed && (
             <div className="animate-fade-in">
               <h1 className="text-xl font-bold">DSA Tracker</h1>
-              <p className="text-xs text-white/70">Track your progress</p>
+              <p className="text-xs text-primary-foreground/70">Track your progress</p>
             </div>
           )}
         </div>
@@ -52,8 +52,8 @@ const Sidebar = () => {
             className={({ isActive }) =>
               cn(
                 "flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200",
-                "hover:bg-white/10 hover:scale-105 group",
-                isActive && "bg-white/20 shadow-glow"
+                "hover:bg-primary-foreground/10 hover:scale-105 group",
+                isActive && "bg-primary-foreground/20"
               )
             }
           >
@@ -66,12 +66,12 @@ const Sidebar = () => {
       </nav>
 
       {/* Collapse Toggle */}
-      <div className="p-4 border-t border-white/10">
+      <div className="p-4 border-t border-primary-foreground/10">
         <Button
           variant="ghost"
           size="icon"
           onClick={() => setCollapsed(!collapsed)}
-          className="w-full hover:bg-white/10 text-white"
+          className="w-full hover:bg-primary-foreground/10 text-primary-foreground"
         >
           {collapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
         </Button>
