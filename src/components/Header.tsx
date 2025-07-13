@@ -1,8 +1,8 @@
-import { Bell, Search, Moon, Sun } from 'lucide-react';
+import { Bell, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { useTheme } from '@/contexts/ThemeContext';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import HeaderSearch from '@/components/HeaderSearch';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
@@ -10,15 +10,7 @@ const Header = () => {
   return (
     <header className="bg-card border-b border-border p-4 flex items-center justify-between">
       {/* Search */}
-      <div className="flex-1 max-w-md">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-          <Input
-            placeholder="Search questions..."
-            className="pl-10 bg-muted/50 border-0 focus:bg-card transition-colors"
-          />
-        </div>
-      </div>
+      <HeaderSearch />
 
       {/* Actions */}
       <div className="flex items-center gap-3">
